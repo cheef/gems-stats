@@ -1,0 +1,14 @@
+div role="navigation" class="navbar navbar-inverse navbar-fixed-top"
+  .container
+    .navbar-header
+      a href="#" class="navbar-brand" Gems Stats
+
+    .collapse.navbar-collapse
+      ul.nav.navbar-nav
+        li.active
+          a href="#" All
+
+      .navbar-form.navbar-left
+        = link_to new_target_gem_path, class: 'btn btn-primary' do
+          i.fa.fa-plus.fa-fw
+          span Add gem

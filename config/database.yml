@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  user: postgres
+
+development:
+  <<: *default
+  database: gems_stats_development
+
+test:
+  <<: *default
+  database: gems_stats_test
+
+production:
+  <<: *default
+  database: gems_stats_production
+  username: gems_stats
+  password: <%= ENV['GEMS_STATS_DATABASE_PASSWORD'] %>
